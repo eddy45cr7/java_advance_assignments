@@ -1,0 +1,22 @@
+Use Advance_assignment;
+
+CREATE TABLE Party
+(partyId      varchar(10) PRIMARY KEY,
+ firtsName    varchar(10),
+ lastName     varchar(10),
+ address      varchar(20),
+ city         varchar(15),
+ zip          varchar(10),
+ state        varchar(20),
+ country      varchar(20),
+ phone        varchar(14));
+
+
+CREATE TABLE UserLogin
+(userLoginId      varchar(20) PRIMARY KEY,
+ password         varchar(20),
+ partyId          varchar(10));
+
+
+ALTER TABLE UserLogin
+ADD FOREIGN KEY (partyID) REFERENCES Party(partyId);
