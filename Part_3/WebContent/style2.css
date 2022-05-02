@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #e84118;
+}
+
+.search-box{
+	position: absolute;
+	top: 15%;
+	left: 78%;
+	transform: translate(-50%,-50%);
+	background: #2f3640;
+	height: 40px;
+	border-radius: 40px;
+	padding: 10px;
+}
+
+.search-box:hover > .search-txt{
+	width: 240px;
+	padding: 0 6px;
+}
+
+.search-btn{
+	color: #e84118;
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #2f3640;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+}
+
+.search-txt{
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 2;
+	color: white;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width:240px;
+}
+
+.rectangle#tbl {
+  height: 75%;
+  width: 1000px;
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+.rectangle#heading {
+	height: 20%;
+	width: 55%;
+	background-color: #2f3640;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+}
+
+.text#hed{
+	font: Georgia-serif;
+	font-size: 80px;
+	color: white;
+	position: absolute;
+	top: 42px;
+	left: 50px;
+}
+
+table{
+	position: absolute;
+	top: 200px;
+	left: 25px;
+}
+
+table, th, td {
+	border-radius: 3px;
+  	border: 3px solid white rgba(255,255,255,1.0);
+  	border-color: white;
+}
+
+th, td {
+	font: Georgia-serif;
+	font-size: 15px;
+	color: white;
+	padding: 15px;
+ 	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  	background-color: #2f3640;
+}
+
+.info{
+	position: absolute;
+  	top: 200px;
+  	left: 500px;
+  	font: Georgia-serif;
+  	font-size: 40px;
+}
+
+button#logout{
+	width: 200px;
+	padding: 10px;
+	position: absolute;
+	left: 600px;
+	top: 50px;
+	font-size: 25px;
+	font-family: Georgia-serif;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: #2f3640;
+	color: #fff;
+	cursor: pointer;
+	border: 3px solid rgba(255,255,255,0.3);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	margin-bottom: 20px;
+}
+
+button#edit{
+	width: 200px;
+	padding: 10px;
+	position: absolute;
+	left: 600px;
+	top: 200px;
+	font-size: 25px;
+	font-family: Georgia-serif;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: #2f3640;
+	color: #fff;
+	cursor: pointer;
+	border: 3px solid rgba(255,255,255,0.3);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	margin-bottom: 20px;
+}
+
+button#delete{
+	width: 200px;
+	padding: 10px;
+	position: absolute;
+	left: 600px;
+	top: 350px;
+	font-size: 25px;
+	font-family: Georgia-serif;
+	font-weight: 600;
+	border-radius: 3px;
+	background-color: #2f3640;
+	color: #fff;
+	cursor: pointer;
+	border: 3px solid rgba(255,255,255,0.3);
+	box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+	margin-bottom: 20px;
+}

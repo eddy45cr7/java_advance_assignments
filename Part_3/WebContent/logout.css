@@ -1,0 +1,22 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color: #2f3640;
+}
+
+.text{
+	font: Georgia-serif;
+	font-size: 90px;
+	color: #fff;
+	position: absolute;
+	left: 300px;
+	top: 200px;;
+}
+
+.link{
+	font: Georgia-serif;
+	font-size: 80px;
+	position: absolute;
+	left: 580px;
+	top: 45%;
+}
