@@ -64,8 +64,6 @@
 	<div class="info">
 		<form id="show" action="LogoutPage.jsp" method="post">
 			<button type="submit" id="logout">Log Out</button>
-		</form><form id="edit" action="EditPage.jsp" method="post">
-			<button type="submit" id="edit">Edit Records</button>
 		</form><form id="delete" action="Delete.jsp" method="post">
 			<button type="submit" id="delete">Delete Record</button>
 		</form>		
