@@ -9,12 +9,6 @@
 <title>Welcome</title>
 </head>
 <body>
-	<div class = "search-box">
-		<input class="search-txt" type="text" name="" placeholder="Type to search">
-		<a class="search-btn" href="#">
-			<i class ="fas fa-search"></i>
-		</a>
-	</div>
 	
 	<div class="rectangle" id="tbl"></div>
 	<div class="rectangle" id="heading"></div>
@@ -27,8 +21,7 @@
 			String pass = "123456";
 			String password;
 		%><%
-			String password = session.getAttribute("password").toString();
-		
+			//String password = request.getAttribute("password").toString();
 			try{
 				%><table><%
 				Connection con = DriverManager.getConnection(url,uname,pass);

@@ -48,7 +48,8 @@ public class UserLogin extends HttpServlet {
 					if(userLoginID.equals(rs.getString(1))) {
 						if(password.equals(rs.getString(2))) {
 							log = true;
-							session.setAttribute("password", password);
+							req.setAttribute("password", password);
+							
 							RequestDispatcher rd = req.getRequestDispatcher("HomePage.jsp");
 							rd.forward(req, res);
 						}
