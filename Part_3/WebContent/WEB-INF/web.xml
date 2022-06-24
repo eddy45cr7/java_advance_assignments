@@ -7,7 +7,7 @@
  </welcome-file-list>
  
  
-  <servlet>
+  	<servlet>
   		<servlet-name>reg</servlet-name>
   		<servlet-class>Project.UserReg</servlet-class>
   	</servlet>
@@ -39,5 +39,55 @@
   		<url-pattern>/registered</url-pattern>
   	</servlet-mapping>
   	
+  	
+  	<servlet>
+  		<servlet-name>sea</servlet-name>
+  		<servlet-class>Project.SearchServ</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>sea</servlet-name>
+  		<url-pattern>/SearchServlet</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>del</servlet-name>
+  		<servlet-class>Project.Delete</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>del</servlet-name>
+  		<url-pattern>/delete</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>edi</servlet-name>
+  		<servlet-class>Project.Edit</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>edi</servlet-name>
+  		<url-pattern>/edit</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>edited</servlet-name>
+  		<servlet-class>Project.Edited</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>edited</servlet-name>
+  		<url-pattern>/edited</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>sear</servlet-name>
+  		<servlet-class>Project.Search</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>sear</servlet-name>
+  		<url-pattern>/search</url-pattern>
+  	</servlet-mapping>
   	
 </web-app>

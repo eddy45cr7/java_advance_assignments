@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 //@WebServlet("/register")
 
 class SqlThings {
-	public  String insert(String str) {
+	public String insert(String str) {
 		String url = "jdbc:mysql://localhost:3306/advance_assignment";
 		String uname = "root";
 		String pass = "123456";
@@ -60,14 +60,14 @@ public class UserReg extends HttpServlet {
 		String zip = req.getParameter("zip");
 		String phone  = req.getParameter("phone");
 		String userLoginID = req.getParameter("user");
-		String password = req.getParameter("password");
+		String password = PasswordEncrypt.encryptor(PasswordEncrypt.encryptor(req.getParameter("password")));
 		String partyId = PartyIdCreator.create(country);
 		
 		String ins = "insert into party values(\""+partyId+"\",\""+fname+"\",\""+lname+"\",\""+address+"\",\""+city+"\",\""+zip+"\",\""+state+"\",\""+country+"\",\""+phone+"\")";
 		String ins2 = "insert into userlogin values(\""+userLoginID+"\",\""+password+"\",\""+partyId+"\")";
 		
 		PrintWriter out = res.getWriter();
-		SqlThings t=new SqlThings ();
+		SqlThings t = new SqlThings ();
 		out.println(t.insert(ins));
 		
 		out.println(t.insert(ins2));
@@ -82,7 +82,7 @@ public class UserReg extends HttpServlet {
 		String password = "bciuew";
 		String partyId = "INDI0001";
 		String ins2 = "insert into userlogin values(\""+userLoginID+"\",\""+password+"\",\""+partyId+"\")";
-		SqlThings t=new SqlThings ();
+		SqlThings t = new SqlThings ();
 		//System.out.println(t.insert(ins2));
 	}
 

@@ -21,7 +21,11 @@
 			String pass = "123456";
 			String password;
 		%><%
-			//String password = request.getAttribute("password").toString();
+			
+			String userName = (String) session.getAttribute("userName");
+			String password = (String) session.getAttribute("password");
+			session.getMaxInactiveInterval();
+			
 			try{
 				%><table><%
 				Connection con = DriverManager.getConnection(url,uname,pass);
@@ -40,7 +44,10 @@
 						%>
 						<th><%= r.getString(1) %></th>
 					<% }  
-				} %></tr><%
+				} %>
+				<th>Edit</th>
+				<th>Delete</th>
+				</tr><%
 				
 				ResultSet rs = st.executeQuery("select * from party");
 				while(true){
@@ -53,7 +60,10 @@
 						for(int i=1;i<10;i++){
 							%><td><%= rs.getString(i) %></td><%
 						}
-						%></tr><%
+						%>
+						<td><a href="http://localhost:8085/customerRegistration/edit?id=<%= rs.getString(1) %>"><button type="submit" id="edit">Edit</button></a></td>
+						<td><a href="http://localhost:8085/customerRegistration/delete?id=<%= rs.getString(1) %>"><button type="submit" id="delete">Delete</button></a></td>
+						</tr><%
 					}
 				}
 				%></table><% 
@@ -62,11 +72,14 @@
 	</div>
 	
 	<div class="info">
+		<form id="search" action="search" method="Post">
+			<input class="search-txt" id="srch-txt" type="text" name ="search" placeholder="Search...">
+			<button type="submit" id="search">Search</button>
+		</form>
 		<form id="show" action="LogoutPage.jsp" method="post">
 			<button type="submit" id="logout">Log Out</button>
-		</form><form id="delete" action="Delete.jsp" method="post">
-			<button type="submit" id="delete">Delete Record</button>
-		</form>		
+		</form>
 	</div>
+	
 </body>
 </html>

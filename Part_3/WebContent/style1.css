@@ -59,9 +59,9 @@ input#name{
 button#submit{
 	width: 200px;
 	padding: 10px;
-	position: absolute;
+	position: sticky;
 	left: 655px;
-	top: 150%;
+	top: 145%;
 	font-size: 25px;
 	font-family: Georgia-serif;
 	font-weight: 600;

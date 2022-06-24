@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="style3.css" type="text/css">
-<title>Insert title here</title>
+<title>Registered</title>
 </head>
 <body>
 <div class="message">

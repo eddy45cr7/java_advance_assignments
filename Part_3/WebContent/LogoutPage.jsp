@@ -14,5 +14,10 @@
 <a href="LoginPage.html">Login Page</a>
 </div>
 
+<% 
+	HttpSession httpSession = request.getSession();
+	httpSession.invalidate();
+%>
+	
 </body>
 </html>

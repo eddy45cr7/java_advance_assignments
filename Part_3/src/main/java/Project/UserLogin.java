@@ -22,7 +22,7 @@ public class UserLogin extends HttpServlet {
 
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		String userLoginID = req.getParameter("user");
-		String password = req.getParameter("password");
+		String password = PasswordEncrypt.encryptor(req.getParameter("password"));
 	
 		String url = "jdbc:mysql://localhost:3306/advance_assignment";
 		String uname = "root";
@@ -46,12 +46,12 @@ public class UserLogin extends HttpServlet {
 					break;
 				}else {
 					if(userLoginID.equals(rs.getString(1))) {
-						if(password.equals(rs.getString(2))) {
+						if(password.equals(PasswordDecrypt.decryptor(rs.getString(2)))) {
 							log = true;
-							req.setAttribute("password", password);
-							
-							RequestDispatcher rd = req.getRequestDispatcher("HomePage.jsp");
-							rd.forward(req, res);
+							session.setAttribute("userName", userLoginID);
+							session.setAttribute("password", password);
+							session.setMaxInactiveInterval(300);
+							res.sendRedirect("HomePage.jsp");
 						}
 					}
 				}
@@ -63,7 +63,7 @@ public class UserLogin extends HttpServlet {
 			}
 			
 		}catch(Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 //		out.println("Logged In!!");
