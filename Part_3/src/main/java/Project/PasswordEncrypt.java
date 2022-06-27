@@ -31,7 +31,7 @@ public class PasswordEncrypt {
 	}
 	
 	public static void main(String[] args) {
-		String str = "password";
+		String str = "Evil_kid";
 		System.out.println(encryptor(encryptor(str)));
 	}
 	

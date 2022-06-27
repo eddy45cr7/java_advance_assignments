@@ -59,12 +59,13 @@ public class UserReg extends HttpServlet {
 		String country = req.getParameter("country");
 		String zip = req.getParameter("zip");
 		String phone  = req.getParameter("phone");
+		String email = req.getParameter("email");
 		String userLoginID = req.getParameter("user");
 		String password = PasswordEncrypt.encryptor(PasswordEncrypt.encryptor(req.getParameter("password")));
 		String partyId = PartyIdCreator.create(country);
 		
 		String ins = "insert into party values(\""+partyId+"\",\""+fname+"\",\""+lname+"\",\""+address+"\",\""+city+"\",\""+zip+"\",\""+state+"\",\""+country+"\",\""+phone+"\")";
-		String ins2 = "insert into userlogin values(\""+userLoginID+"\",\""+password+"\",\""+partyId+"\")";
+		String ins2 = "insert into userlogin values(\""+userLoginID+"\",\""+password+"\",\""+partyId+"\",\""+email+"\")";
 		
 		PrintWriter out = res.getWriter();
 		SqlThings t = new SqlThings ();
@@ -72,6 +73,8 @@ public class UserReg extends HttpServlet {
 		
 		out.println(t.insert(ins2));
 			
+		Mail.send(email, fname, userLoginID);
+		
 		res.setContentType("text/html");
 		RequestDispatcher rd = req.getRequestDispatcher("RegisteredScreen.jsp");
 		rd.forward(req, res);
