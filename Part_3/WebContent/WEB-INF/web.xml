@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+ <display-name>customerRegistration</display-name>
+ 
+ <welcome-file-list>
+ 	<welcome-file>LoginPage.html</welcome-file>
+ </welcome-file-list>
+ 
+ 
+  	<servlet>
+  		<servlet-name>reg</servlet-name>
+  		<servlet-class>Project.UserReg</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>reg</servlet-name>
+  		<url-pattern>/register</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+  		<servlet-name>log</servlet-name>
+  		<servlet-class>Project.UserLogin</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>log</servlet-name>
+  		<url-pattern>/login</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+  		<servlet-name>reged</servlet-name>
+  		<servlet-class>RegisteredScreen_jsp</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>reged</servlet-name>
+  		<url-pattern>/registered</url-pattern>
+  	</servlet-mapping>
+  	
+  	
+  	<servlet>
+  		<servlet-name>sea</servlet-name>
+  		<servlet-class>Project.SearchServ</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>sea</servlet-name>
+  		<url-pattern>/SearchServlet</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>del</servlet-name>
+  		<servlet-class>Project.Delete</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>del</servlet-name>
+  		<url-pattern>/delete</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>edi</servlet-name>
+  		<servlet-class>Project.Edit</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>edi</servlet-name>
+  		<url-pattern>/edit</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>edited</servlet-name>
+  		<servlet-class>Project.Edited</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>edited</servlet-name>
+  		<url-pattern>/edited</url-pattern>
+  	</servlet-mapping>
+  	
+  	<servlet>
+  		<servlet-name>sear</servlet-name>
+  		<servlet-class>Project.Search</servlet-class>
+  	</servlet>
+  	
+  	<servlet-mapping>
+  		<servlet-name>sear</servlet-name>
+  		<url-pattern>/search</url-pattern>
+  	</servlet-mapping>
+  	
+</web-app>
